@@ -29,7 +29,7 @@ fi
                 echo "Dependency ${DEPENDENCY} not found. Aborting" | indent
                 exit 1
             fi
-            TARGET="${BUILD_DIR}/${DEPENDENCY}"
+            TARGET="${BUILD_DIR}/${APP_BASE}/${DEPENDENCY}"
             echo "Lifting dependency ${DEPENDENCY} from '${BUILD_DIR}/${DEPENDENCY}' to '${TARGET}'." | indent | indent
             mkdir -p "${TARGET}"
             mv -v "${BUILD_DIR}/${DEPENDENCY}" "${TARGET}"
