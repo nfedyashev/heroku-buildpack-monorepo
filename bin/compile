@@ -31,6 +31,7 @@ fi
             fi
             TARGET="${BUILD_DIR}/../${DEPENDENCY}"
             echo "Lifting dependency ${DEPENDENCY} from '${BUILD_DIR}/${DEPENDENCY}' to '${TARGET}'." | indent | indent
+            mkdir -p "${TARGET}"
             mv -v "${BUILD_DIR}/${DEPENDENCY}" "${TARGET}"
         done
     fi &&
